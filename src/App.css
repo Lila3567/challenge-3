@@ -1,0 +1,32 @@
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.character {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+}
+
+.portrait {
+  width: 100%;
+  cursor: pointer;
+}
+
+.text-component, .edit-mode {
+  margin-top: 10px;
+}
+
+.edit-mode input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
