@@ -1,32 +1,125 @@
-.dashboard {
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #000;
+  font-family: 'Lora', serif;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: column;
+    background-color: bisque;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.App {
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 98vh;
+  box-sizing: border-box;
 }
 
 .character {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 200px;
+  height: 360px;
+  width: 100%;
+  max-width: 340px;
+  padding: 1.5rem;
+  border: 2px solid #0484ab;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.portrait {
-  width: 100%;
+.character:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(5, 160, 124, 0.5);
   cursor: pointer;
 }
+.btn{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  align-items: center;
+}
+.add{
+  display: flex;
+  flex-direction: column;
+  width:70%;
+  margin-left: 20%;
+border-radius: 10px;
 
-.text-component, .edit-mode {
-  margin-top: 10px;
+}
+.del {
+  cursor: pointer;
+  background-color: #a83f3f;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
 }
 
-.edit-mode input {
+.del:hover {
+  opacity: 0.85;
+}
+.edit {
+  cursor: pointer;
+  background-color: #0484ab;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  color: #fff;
+
+  transition: opacity 0.2s ease;
+}
+
+.edit:hover {
+  opacity: 0.85;
+}
+.toggle-form-btn {
+  cursor: pointer;
+  background-color: #0484ab;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+ 
+  font-size: 1.2rem;
+ 
+  transition: opacity 0.2s ease;
+ margin-left: 80%;
+ margin-top: 10px;
   display: block;
-  width: 100%;
-  margin-bottom: 10px;
 }
 
-button {
-  margin-right: 5px;
-  padding: 5px 10px;
+.toggle-form-btn:hover {
+  opacity: 0.85;
+}
+.image {
+  width: 150px;
+  height: 150px;
+  padding: 0.5rem 0;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
 }
